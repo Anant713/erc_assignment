@@ -4,16 +4,16 @@ Fast fourier transform graph
 Fast fourier transform magnitude graph (halved)
 ![Screenshot 2025-04-11 152940](https://github.com/user-attachments/assets/b1fef1db-c4f8-41e1-8639-b940193cd50c)
 Demodulated message graph
-Carrier frequency obtained = 10582.307314454129 Hz
+##Carrier frequency obtained = 10582.307314454129 Hz
 
-Libraries used --> matplotlib, scipy , numpy
-explaination of the code in blocks -->
-    fs , signal = wavy.read('modulated_noisy_audio.wav')
-    signal = signal / np.max(np.abs(signal))
+##Libraries used --> matplotlib, scipy , numpy
+#explaination of the code in blocks -->
+    -fs , signal = wavy.read('modulated_noisy_audio.wav')
+    -signal = signal / np.max(np.abs(signal))
 fs = sampling rate ( Depend on how/on which device the audio was recorded)
 signal = array of amplitudes of the waveform
-    frt = np.fft.fft(signal)
-    freqs = np.fft.fftfreq(len(signal), d=1/fs)
+    -frt = np.fft.fft(signal)
+    -freqs = np.fft.fftfreq(len(signal), d=1/fs)
 frt = fourier transform of the signal
 freqs = corresponding frequencies
     half = len(signal) // 2
